@@ -4,14 +4,36 @@
   <artifactId>sitemap</artifactId>
   <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>sitemap</name>
+  <name>${project.groupId}:${project.artifactId}</name>
+  
   <description>
       A basic java utility for creating sitemaps. 
   </description>
+  
+  <licenses>
+	<license>
+    	<name>The Apache License, Version 2.0</name>
+    	<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+  	</license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Matthew Hunter</name>
+      <email>matthew@infodancer.org</email>
+      <organization>infodancer</organization>
+      <organizationUrl>http://www.infodancer.org</organizationUrl>
+    </developer>
+  </developers>
+  
   <dependencies>
   </dependencies>
+  <scm>
+  	<connection>scm:git:git://github.com/infodancer/sitemap.git</connection>
+  	<developerConnection>scm:git:ssh://github.com:infodancer/sitemap.git</developerConnection>
+  	<url>http://github.com/infodancer/sitemap/tree/master</url>
+  </scm>
+  
   <build>
-    <finalName>sitemap</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -22,6 +44,25 @@
            <target>1.6</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
+  
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
