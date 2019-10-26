@@ -33,9 +33,26 @@
   	<developerConnection>scm:git:ssh://github.com:infodancer/sitemap.git</developerConnection>
   	<url>http://github.com/infodancer/sitemap/tree/master</url>
   </scm>
+  <distributionManagement>
+   <snapshotRepository>
+    <id>ossrh</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+   </snapshotRepository>
+  </distributionManagement>
   
   <build>
     <plugins>
+     <plugin>
+  	  <groupId>org.sonatype.plugins</groupId>
+  		<artifactId>nexus-staging-maven-plugin</artifactId>
+  		<version>1.6.7</version>
+  		<extensions>true</extensions>
+  		<configuration>
+     		<serverId>ossrh</serverId>
+     		<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+     		<autoReleaseAfterClose>true</autoReleaseAfterClose>
+  		</configuration>
+	 </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -45,6 +62,13 @@
            <target>1.6</target>
         </configuration>
       </plugin>
+    </plugins>
+  </build>
+  <profiles>
+  <profile> 
+    <id>release</id>
+    <build>
+     <plugins>
       <plugin>
       	<groupId>org.apache.maven.plugins</groupId>
       	<artifactId>maven-source-plugin</artifactId>
@@ -86,8 +110,10 @@
       </executions>
     </plugin>
     </plugins>
-  </build>
-  
+    </build>
+  </profile>
+</profiles>
+
   <reporting>
     <plugins>
       <plugin>
