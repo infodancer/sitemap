@@ -1,9 +1,12 @@
 package org.infodancer.sitemap;
 
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * A sitemap entry for a specific URL. 
+ * @author matthew@infodancer.org
+ */
 public class SitemapEntry
 {
 	Long id;
