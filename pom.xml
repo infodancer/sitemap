@@ -3,7 +3,7 @@
   <groupId>org.infodancer</groupId>
   <artifactId>sitemap</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.1</version>
+  <version>0.0.1-SNAPSHOT</version>
   <name>${project.groupId}:${project.artifactId}</name>
   
   <description>
@@ -29,8 +29,8 @@
   <dependencies>
   </dependencies>
   <scm>
-  	<connection>scm:git:git://github.com/infodancer/sitemap.git</connection>
-  	<developerConnection>scm:git:ssh://infodancer@github.com/infodancer/sitemap.git</developerConnection>
+  	<connection>scm:git:http://github.com/infodancer/sitemap.git</connection>
+  	<developerConnection>scm:git:http://infodancer@github.com/infodancer/sitemap.git</developerConnection>
   	<url>http://github.com/infodancer/sitemap/tree/master</url>
     <tag>sitemap-0.0.1</tag>
   </scm>
